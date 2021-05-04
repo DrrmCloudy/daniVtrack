@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WXC-oV-gH5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--COVID-19 Cases Near You-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryE-49-gVV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLu-gM-OJi">
+                                <rect key="frame" x="107" y="691" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="OJr-0j-Cgv"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ud8-E3-T9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Symptom Report">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sVE-ad-bze" kind="show" id="DSh-oC-8Mf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HLu-gM-OJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Vd-ou-5rt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ryE-49-gVV" secondAttribute="bottom" id="B95-61-dDk"/>
+                            <constraint firstItem="HLu-gM-OJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="12" id="Gqc-mX-Jvo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ryE-49-gVV" secondAttribute="trailing" id="HvI-vx-9OL"/>
+                            <constraint firstItem="ryE-49-gVV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MBz-MB-6NQ"/>
+                            <constraint firstItem="HLu-gM-OJi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NcI-lU-b91"/>
+                            <constraint firstItem="ryE-49-gVV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ngv-MO-Pkw"/>
+                            <constraint firstItem="HLu-gM-OJi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="333" id="Qop-fi-2jB"/>
+                            <constraint firstItem="HLu-gM-OJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qu8-fw-K4q"/>
+                            <constraint firstItem="HLu-gM-OJi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vxR-cX-IPU"/>
+                            <constraint firstItem="HLu-gM-OJi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="268" id="xsH-ta-klf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="COVID-19 Cases Near You" id="SFq-mJ-aLD"/>
+                    <connections>
+                        <outlet property="mapView" destination="ryE-49-gVV" id="rha-ik-sUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Checkup Questions-->
+        <scene sceneID="H6s-gj-jDo">
+            <objects>
+                <viewController id="sVE-ad-bze" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aPf-WJ-q3O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Kvg-e5-NLu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checkup Questions" id="Fb6-u9-Of8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pM6-na-39s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t9y-Uq-kJz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WXC-oV-gH5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nqe-mp-2sL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ae1-a7-Jof"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjW-1n-EbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
